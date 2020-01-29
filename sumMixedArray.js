@@ -2,4 +2,12 @@
 
 // Return your answer as a number.
 
+function sumMix(array){
+    return array.reduce(sum, 0)
+}
 
+function sum(total, number){
+    return parseInt(total) + parseInt(number)
+}
+
+console.log(sumMix([9,'3', 2, '3']))
