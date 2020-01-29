@@ -19,7 +19,7 @@ function digitPower( number, power ) {
         power++
     }
     if(powerNumber % number === 0){
-        return 1
+        return powerNumber / number
     } else {
         return -1
     }
