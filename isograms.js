@@ -3,14 +3,14 @@
 // Assume the empty string is an isogram. Ignore letter case.
 
 function isIsogram(string){
-    const stringArray = string.toLowerCase().split('')
-    if(stringArray.length === 1){
+    const newArray = string.toLowerCase().split('')
+    const comparisonLetter = newArray.shift()
+    if(newArray.length === 1 || newArray.length === 0){
         return true
-    } else if(stringArray[0] === stringArray[stringArray.length -1]){
-        const newString = stringArray.slice(1, string.length-1).join('')
-        return isIsogram(newString)
-    } else {
+    } else if(newArray.includes(comparisonLetter)){
         return false
+    } else {
+        return isIsogram(newArray.join('')) 
     }
 }
 
