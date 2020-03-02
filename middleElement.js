@@ -14,7 +14,8 @@
 // 10 is the number that fits between 5 and 14 and the index of 10 in the input array is 1.
 
 function gimme(inputArray){
-    return index of middle
+    const middleNumber = [...inputArray].sort((a, b) => a-b)[1]
+    return inputArray.indexOf(middleNumber)
 }
 
-console.log(gimme([1,3,2]))
+console.log(gimme([-9,8,32]))
