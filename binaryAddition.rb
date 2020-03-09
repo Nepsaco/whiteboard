@@ -9,22 +9,18 @@ def add_binary(a,b)
   total.to_s(2)
 end
 
-def add_binary(a, b)
+def add_real_binary(a, b)
   total = a + b
-  binaryArray = [total]
+  binaryArray = []
 
   while total > 0 do
-    binaryArray << total /= 2
+    remainder = total % 2
+    binaryArray << remainder
+    total /= 2
   end
 
-  binaryArray.map do |number| 
-    if number % 2 == 0
-      number = 0
-    else
-      number = 1
-    end
-  end
+  binaryArray
 end
 
-puts add_binary(2, 2)
+puts add_real_binary(2, 2)
 
