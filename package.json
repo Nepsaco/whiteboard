@@ -1,0 +1,25 @@
+{
+  "name": "Whiteboard",
+  "version": "1.0.0",
+  "description": "A repo of solved whiteboarding problems! Come take a look at potential interview questions",
+  "main": "anagram.js",
+  "scripts": {
+    "test": "mocha",
+    "start": "nodemon start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nepsaco/whiteboard.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Nepsaco/whiteboard/issues"
+  },
+  "homepage": "https://github.com/Nepsaco/whiteboard#readme",
+  "dependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^7.1.1"
+  }
+}

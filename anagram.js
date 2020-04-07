@@ -10,7 +10,16 @@ function isAnagram(string){
     }
 }
 
-console.log(isAnagram('tacocat'))
-console.log(isAnagram("Dermatoglyphics"))
-console.log(isAnagram("aba"))
-console.log(isAnagram("moOse"))
+function refactorAnagram(string){
+
+}
+
+const normalizeString = (string) => {
+    string.toLowerCase().split('')
+}
+
+
+module.exports = {
+    isAnagram,
+    refactorAnagram,
+}
