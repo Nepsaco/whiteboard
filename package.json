@@ -2,7 +2,7 @@
   "name": "Whiteboard",
   "version": "1.0.0",
   "description": "A repo of solved whiteboarding problems! Come take a look at potential interview questions",
-  "main": "anagram.js",
+  "main": "",
   "scripts": {
     "test": "mocha",
     "start": "nodemon start"
