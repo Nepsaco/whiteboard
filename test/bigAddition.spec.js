@@ -41,11 +41,14 @@ describe('Add two numbers', function(){
 
     dataModel.forEach(test => {
         const {number1, number2, sum} = test
-        it.skip(`should pass basic tests ${number1} + ${number2}`, () => {
+        it(`should pass basic tests ${number1} + ${number2}`, () => {
             assert.equal(add(number1, number2), sum)
         })
     })
     it('test pad number', () => {
-        assert.equal(padNumber(100, 1), [100, 001])
+        assert.deepEqual(padNumber('100', '1'), [ '100', '001' ])
+    })
+    it('test pad number', () => {
+        assert.deepEqual(padNumber('2834343', '1'), [ '2834343', '0000001' ])
     })
 })
