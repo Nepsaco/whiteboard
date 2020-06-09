@@ -25,23 +25,23 @@
 // This is something that you should never do. If you mutate the input, you will not be able to pass all the tests. 
 
 function score(dice){
-    const points = {
-        1: 100,
-        5: 50,
-        2,2,2: 200,
-        3,3,3: 300,
-        4,4,4: 400,
-        5,5,5: 500,
-        6,6,6: 600
-    }
-    return 1200
+    const tripleScore = [1000, 200, 300, 400, 500, 600]
+    const singleScore = [100, 0 , 0, 0, 50, 0]
+
+    return dieCount(dice)
+        .reduce((score, dieTotal, index) => {
+            return score + (dieTotal >= 3 ? tripleScore[index] : 0) + (singleScore[index] * (dieTotal % 3))
+        }, 0)
 }
 
-function findTripples(dice){
+function dieCount(dice){
+    const dieCount = [0,0,0,0,0,0]
 
+    dice.forEach(die => dieCount[die -1]++)
+    return dieCount
 }
 
 module.exports = {
     score,
-    findTripples
+    dieCount
 }
